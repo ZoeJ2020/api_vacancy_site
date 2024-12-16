@@ -10,7 +10,7 @@ async function fetchRecentVacancies() {
         throw new Error(`Response status: ${response.status}`);
       }
   
-      let json = response.json();
+      let json = await response.json();
 
     //   get top 10 vacancies only - have to do manually due to API limit parameter not functioning properly.
       json = json.slice(0, 10);
@@ -66,7 +66,7 @@ async function fetchSearchVacancies(evt){
         throw new Error(`Response status: ${response.status}`);
       }
   
-      let json = response.json();
+      let json = await response.json();
 
     //   get top 10 vacancies only - have to do manually due to API limit parameter not functioning properly.
       json = json.slice(0, 10);
@@ -80,7 +80,7 @@ async function fetchSearchVacancies(evt){
 
 async function fetchGeneralInfo(vacancyTitle){
 
-    const url = `http://api.lmiforall.org.uk/api/v1/soc/search?q=${encodeURIComponent(vacancyTitle)}`;
+    const url = `https://api.lmiforall.org.uk/api/v1/soc/search?q=${encodeURIComponent(vacancyTitle)}`;
 
     try {
         const response = await fetch(url);
@@ -89,7 +89,7 @@ async function fetchGeneralInfo(vacancyTitle){
             throw new Error(`Response status: ${response.status}`);
         }
 
-        let json = response.json();
+        let json = await response.json();
 
         if (!json || json.length === 0) {
             console.warn(`No general info found for "${vacancyTitle}"`);
