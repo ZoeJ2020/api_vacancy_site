@@ -1,0 +1,11 @@
+.vacancy-bg{
+    background-image: url(../../images/bg-test2.jpg);
+}
+
+.card .user-result{
+    height: 300px;
+}
+
+.card .recent-result .filter-form{
+    height: 200px;
+}

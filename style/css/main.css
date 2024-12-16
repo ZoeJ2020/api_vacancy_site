@@ -1,0 +1,47 @@
+h1, h2, h3, h4, h5, h6{
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.text-darkblue{
+    color: #1E2A47 !important;
+}
+
+*{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+.bg-darkblue{
+    background-color: #1E2A47;
+}
+
+/* add grayscale filter to images */
+.gray{
+    filter: grayscale(1);
+}
+
+/* added custom viewport height classes based on bootstrap's vh-100 class */
+.vh-50 {
+    height: 50vh !important;
+}
+
+.vh-94 {
+    height: 94vh !important;
+    object-fit: cover;
+}
+
+/* bold font on active navlink */
+.active{
+    font-weight: 650;
+}
+
+/* styling for background image on takehome and vacancy pages */
+.container-img-wrapper{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
