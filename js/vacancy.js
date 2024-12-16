@@ -17,7 +17,7 @@ async function fetchRecentVacancies() {
     //   get top 10 vacancies only - have to do manually due to API limit parameter not functioning properly.
     //   json = json.slice(0, 10);
 
-      console.log(json);
+    //   console.log(json);
 
       displayResults(json, "on-page-load");
 
@@ -102,8 +102,8 @@ async function fetchGeneralInfo(vacancyTitle){
             };
         }
 
-        console.log(url);
-        console.log(json[0]);
+        // console.log(url);
+        // console.log(json[0]);
 
         return json[0];
         
