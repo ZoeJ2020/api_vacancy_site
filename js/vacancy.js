@@ -12,8 +12,10 @@ async function fetchRecentVacancies() {
   
       let json = await response.json();
 
+      console.log(json);
+
     //   get top 10 vacancies only - have to do manually due to API limit parameter not functioning properly.
-      json = json.slice(0, 10);
+    //   json = json.slice(0, 10);
 
       console.log(json);
 
@@ -114,7 +116,13 @@ async function displayResults(json, displayType){
 
     const vacancyPromise = json.map(async vacancy => {
 
-        const generalInfo = await fetchGeneralInfo(vacancy.title);
+        const response = await fetchGeneralInfo(vacancy.title);
+
+        if (!response.ok){
+            throw new Error(`Response status: ${response.status}`);
+        }
+
+        let generalInfo = await response.json();
 
         const resultDiv = document.createElement("div");
 
