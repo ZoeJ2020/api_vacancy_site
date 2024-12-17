@@ -1,4 +1,3 @@
-
 document.getElementById("takehome-form").addEventListener("submit", calculateTakehome);
 
 function calculateTakehome(evt) {
@@ -76,8 +75,11 @@ function calculateTakehome(evt) {
 
 function displayResult(resultObject){
 
-    document.getElementById("takehome_output").innerHTML=`
-        <h3>Job: <b>${resultObject.JobTitle}</b></h3>
+    const heroOutputCard = document.getElementById("takehome_output");
+    heroOutputCard.hidden = true;
+
+    heroOutputCard.innerHTML=`
+        <h3>Job: <b><a class="text-darkblue" href="vacancies.html?job=${resultObject.JobTitle}">${resultObject.JobTitle}</a></b></h3>
         <p>Working <b>${resultObject.HoursWorked} hours a week</b> for a gross pay of <b>£${resultObject.GrossPay} per ${resultObject.PayTimeframe}</b> with <b>${resultObject.TaxRate}% Tax</b> and <b>${resultObject.NIRate}% NI</b> results in a take-home pay of:</p>
         <ul class="list-group list-group-flush pb-5">
             <li class="list-group-item">£${resultObject.HourPay} per Hour</li>
@@ -85,9 +87,15 @@ function displayResult(resultObject){
             <li class="list-group-item">£${resultObject.MonthPay} per Month</li>
             <li class="list-group-item">£${resultObject.YearPay} per Year</li>
         </ul>
-        <a href="#takehome_output_history" class="link-secondary text-darkblue">View all calculations</a>`
-        document.getElementById("takehome_output").hidden = false;
+        <a href="#takehome_output_history" class="link-secondary text-darkblue">View all calculations</a>`;
 
+    heroOutputCard.hidden = false;
+    heroOutputCard.classList = "p-3 border bg-light h-100 p-0 p-5 my-lg-0 animate-fadeUpIn";
+
+    if(window.innerWidth <= "992"){
+        heroOutputCard.scrollIntoView();
+    }
+        
 
     const newDiv = document.createElement("div");
     newDiv.classList.add("col-md-6");
@@ -95,7 +103,7 @@ function displayResult(resultObject){
     newDiv.innerHTML =
         `<div class="card bg-light rounded-0 my-3">
             <div class="card-body">
-                <h3>Job: <b>${resultObject.JobTitle}</b></h3>
+                <h3>Job: <b><a class="text-darkblue" href="vacancies.html?job=${resultObject.JobTitle}">${resultObject.JobTitle}</a></b></h3>
                 <p>Working <b>${resultObject.HoursWorked} hours a week</b> for a gross pay of <b>£${resultObject.GrossPay} per ${resultObject.PayTimeframe}</b> with <b>${resultObject.TaxRate}% Tax</b> and <b>${resultObject.NIRate}% NI</b> results in a take-home pay of:</p>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">£${resultObject.HourPay} per Hour</li>

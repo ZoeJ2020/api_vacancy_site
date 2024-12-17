@@ -1,13 +1,4 @@
-h1, h2, h3, h4, h5, h6{
-    font-family: "Merriweather", serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.text-darkblue{
-    color: #1E2A47 !important;
-}
-
+/* Reset default font values for all elements */
 *{
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
@@ -16,11 +7,21 @@ h1, h2, h3, h4, h5, h6{
       "wdth" 100;
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-family: "Merriweather", serif;
+    font-style: normal;
+}
+
+.text-darkblue{
+    font-family: "Merriweather", serif;
+    color: #1E2A47 !important;
+}
+
 .bg-darkblue{
     background-color: #1E2A47;
 }
 
-/* add grayscale filter to images */
+/* add grayscale filter to certain images */
 .gray{
     filter: grayscale(1);
 }
@@ -40,8 +41,13 @@ h1, h2, h3, h4, h5, h6{
     font-weight: 650;
 }
 
-/* styling for background image on takehome and vacancy pages */
+/* styling for background images on takehome and vacancy pages */
 .container-img-wrapper{
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* minimum height for hero to prevent overflowing text on small screens */
+.hero-container{
+    min-height: 430px;
 }

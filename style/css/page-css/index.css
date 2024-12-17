@@ -3,3 +3,7 @@
     height: 45vw;
     object-fit: cover;
 }
+
+#d-takehome-text, #d-vacancy-text, #m-vacancy-text, #m-takehome-text{
+    opacity: 0;
+}

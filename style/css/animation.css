@@ -1,0 +1,48 @@
+/* Keyframe CSS animations */
+
+@keyframes fadeUpIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.animate-fadeUpIn{
+    animation: fadeUpIn 0.5s ease-out forwards; /* Adjust duration and easing as needed */
+    opacity: 0; /* Initially invisible */
+}
+
+@keyframes fadeLeftIn {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+  }
+
+.animate-fadeLeftIn{
+    animation: fadeLeftIn 0.5s ease-out forwards; /* Adjust duration and easing as needed */
+    opacity: 0; /* Initially invisible */
+}
+
+@keyframes fadeRightIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+  }
+
+.animate-fadeRightIn{
+    animation: fadeRightIn 0.5s ease-out forwards; /* Adjust duration and easing as needed */
+}
