@@ -1,5 +1,7 @@
 /* Keyframe CSS animations */
 
+/* fadeUpIn - tagged elements will move upwards and fade-in */
+
 @keyframes fadeUpIn {
     0% {
       opacity: 0;
@@ -12,9 +14,11 @@
   }
 
 .animate-fadeUpIn{
-    animation: fadeUpIn 0.5s ease-out forwards; /* Adjust duration and easing as needed */
-    opacity: 0; /* Initially invisible */
+    animation: fadeUpIn 0.5s ease-out forwards;
+    opacity: 0;
 }
+
+/* fadeLeftIn - tagged elements will move left and fade-in */
 
 @keyframes fadeLeftIn {
     0% {
@@ -28,9 +32,11 @@
   }
 
 .animate-fadeLeftIn{
-    animation: fadeLeftIn 0.5s ease-out forwards; /* Adjust duration and easing as needed */
-    opacity: 0; /* Initially invisible */
+    animation: fadeLeftIn 0.5s ease-out forwards;
+    opacity: 0;
 }
+
+/* fadeRightIn - tagged elements will move right and fade-in */
 
 @keyframes fadeRightIn {
     0% {
@@ -44,5 +50,5 @@
   }
 
 .animate-fadeRightIn{
-    animation: fadeRightIn 0.5s ease-out forwards; /* Adjust duration and easing as needed */
+    animation: fadeRightIn 0.5s ease-out forwards;
 }

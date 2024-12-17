@@ -24,6 +24,8 @@ async function loadVacancies() {
         setTimeout(() => {
             fetchRecentVacancies();
         }, 1700);
+    } else{
+        fetchRecentVacancies();
     }
 
 }

@@ -1,11 +1,6 @@
+/* vacancies.css - CSS for vacancies.html specififcally */
+
+/* background image for form section */
 .vacancy-bg{
     background-image: url(../../images/vacancy-bg.jpg);
-}
-
-.card .user-result{
-    height: 300px;
-}
-
-.card .recent-result .filter-form{
-    height: 200px;
 }

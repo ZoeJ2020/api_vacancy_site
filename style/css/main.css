@@ -1,4 +1,6 @@
-/* Reset default font values for all elements */
+/* main.css - CSS styling that affects all HTML files */
+
+/* reset default font values for all elements */
 *{
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
@@ -12,6 +14,7 @@ h1, h2, h3, h4, h5, h6{
     font-style: normal;
 }
 
+/* text and bg styling based off of Bootstrap classes */
 .text-darkblue{
     font-family: "Merriweather", serif;
     color: #1E2A47 !important;
