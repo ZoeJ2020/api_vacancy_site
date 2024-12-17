@@ -97,7 +97,7 @@ function displayResult(resultObject){
     }
         
 
-    const newDiv = document.createElement("div");
+    const newDiv = document.createElement("article");
     newDiv.classList.add("col-md-6");
 
     newDiv.innerHTML =

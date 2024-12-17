@@ -16,12 +16,12 @@
   </head>
   <body>
     <!-- Header with navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <header class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <nav class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <!-- Navbar page links -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
             <li class="nav-item">
@@ -35,88 +35,91 @@
             </li>
           </ul>
           <!-- Navbar page links END-->
-        </div>
+        </nav>
       </div>
-    </nav>
+    </header>
     <!-- Header END -->
 
-    <!-- form section with image bg -->
-    <div class="container-img-wrapper text-darkblue takehome-bg px-md-0 p-md-5">
-      <div class="container">
-        <div class="row gx-3">
-          <div class="col-lg">
-            <form id="takehome-form" class="row g-3 p-4 border bg-light m-auto">
-              <h2>Take-Home Pay Calculator</h2>
-              <div class="col-12">
-                <label for="job_title" class="form-label">Job Title</label>
-                <input required type="text" class="form-control" id="job_title" placeholder="1234 Main St">
-              </div>
-              <div class="col-md-6">
-                <label for="gross_pay" class="form-label">Gross Pay</label>
-                <div class="input-group">
-                  <div class="input-group-text">£</div>
-                  <input required type="number" step="0.01" class="form-control" id="gross_pay" placeholder="3500">
+    <main>
+      <!-- form section with image bg -->
+      <section class="container-img-wrapper text-darkblue takehome-bg px-md-0 p-md-5">
+        <div class="container">
+          <div class="row gx-3">
+            <div class="col-lg">
+              <form id="takehome-form" class="row g-3 p-4 border bg-light m-auto">
+                <h2>Take-Home Pay Calculator</h2>
+                <div class="col-12">
+                  <label for="job_title" class="form-label">Job Title</label>
+                  <input required type="text" class="form-control" id="job_title" placeholder="1234 Main St">
                 </div>
-              </div>
-              <div class="col-md-6">
-                <label for="pay_timeframe" class="form-label">Pay Timeframe</label>
-                <select id="pay_timeframe" class="form-select">
-                  <option value="Hour">Hourly</option>
-                  <option value="Week">Weekly</option>
-                  <option value="Month">Monthly</option>
-                  <option value="Year">Yearly</option>
-                </select>
-              </div>
+                <div class="col-md-6">
+                  <label for="gross_pay" class="form-label">Gross Pay</label>
+                  <div class="input-group">
+                    <div class="input-group-text">£</div>
+                    <input required type="number" step="0.01" class="form-control" id="gross_pay" placeholder="3500">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="pay_timeframe" class="form-label">Pay Timeframe</label>
+                  <select id="pay_timeframe" class="form-select">
+                    <option value="Hour">Hourly</option>
+                    <option value="Week">Weekly</option>
+                    <option value="Month">Monthly</option>
+                    <option value="Year">Yearly</option>
+                  </select>
+                </div>
 
-              <div class="col-md-4">
-                <label for="hours" class="form-label">Hours per Week</label>
-                <input required type="number" class="form-control" id="hours">
-              </div>
-              <div class="col-md-4">
-                <label for="tax" class="form-label">Tax Rate [%]</label>
-                <input required type="number" step="0.01" class="form-control" id="tax">
-              </div>
-              <div class="col-md-4">
-                <label for="ni" class="form-label">NI Rate [%]</label>
-                <input required type="number" step="0.01" class="form-control" id="ni">
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-dark bg-darkblue text-light w-100 py-3">Calculate Pay</button>
-              </div>
-            </form>
-          </div>
+                <div class="col-md-4">
+                  <label for="hours" class="form-label">Hours per Week</label>
+                  <input required type="number" class="form-control" id="hours">
+                </div>
+                <div class="col-md-4">
+                  <label for="tax" class="form-label">Tax Rate [%]</label>
+                  <input required type="number" step="0.01" class="form-control" id="tax">
+                </div>
+                <div class="col-md-4">
+                  <label for="ni" class="form-label">NI Rate [%]</label>
+                  <input required type="number" step="0.01" class="form-control" id="ni">
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-dark bg-darkblue text-light w-100 py-3">Calculate Pay</button>
+                </div>
+              </form>
+            </div>
 
-          <div class="col-lg">
-            <div class="p-3 border bg-light h-100 p-0 p-5 my-lg-0" id="takehome_output" hidden></div>
+            <section class="col-lg">
+              <article id="takehome_output" class="p-3 border bg-light h-100 p-0 p-5 my-lg-0" hidden></div>
+            </section>
           </div>
         </div>
-      </div>
-
-    </div>
+      </section>
+      <!-- form section with image bg END -->
 
       <!-- container for holding all pay calculations without refreshing page -->
-      <div class="bg-darkblue">
+      <section class="bg-darkblue">
         <div class="container text-light pt-4">
           <div id="takehome_output_history"  class="row">
             <h2>Calculation History</h2>
             <p>All your take-home pay calculations will show up here.</p>
           </div>
         </div>
+      </section>
+      <!-- pay calculation section END -->
+    </main>
 
-        <!-- footer section -->
-        <div class="container">
-          <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top text-light">
-            <p class="col-md-4 mb-0">© 2024 Zoe Johnston</p>
-      
-            <ul class="nav col-md-4 justify-content-end text-light">
-              <li class="nav-item"><a href="../index.html" class="nav-link px-2 text-light">Homepage</a></li>
-              <li class="nav-item"><a href="takehome.html" class="nav-link px-2 text-light">Take-Home Pay Calculator</a></li>
-              <li class="nav-item"><a href="vacancies.html" class="nav-link px-2 text-light">Vacancy Search</a></li>
-            </ul>
-          </footer>
-        </div>
-        <!-- footer section END -->
-      </div>
+    <!-- footer section -->
+    <section class="bg-darkblue">
+      <footer class="container d-flex flex-wrap justify-content-between align-items-center py-3 pt-4 border-top text-light">
+        <p class="col-md-4 mb-0">© 2024 Zoe Johnston</p>
+  
+        <ul class="nav col-md-4 justify-content-end text-light">
+          <li class="nav-item"><a href="../index.html" class="nav-link px-2 text-light">Homepage</a></li>
+          <li class="nav-item"><a href="takehome.html" class="nav-link px-2 text-light">Take-Home Pay Calculator</a></li>
+          <li class="nav-item"><a href="vacancies.html" class="nav-link px-2 text-light">Vacancy Search</a></li>
+        </ul>
+      </footer>
+    </section>
+    <!-- footer section END -->
 
     <script src="../js/takehome.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

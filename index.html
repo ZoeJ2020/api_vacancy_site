@@ -20,12 +20,12 @@
   </head>
   <body>
     <!-- Header with navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <header class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <nav class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <!-- Navbar page links -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
             <li class="nav-item">
@@ -39,92 +39,97 @@
             </li>
           </ul>
           <!-- Navbar page links END-->
-        </div>
+        </nav>
       </div>
-    </nav>
+    </header>
     <!-- Header END -->
 
-    
-    <!-- Hero section with call-to-action -->
-    <section class="bg-darkblue py-5"> 
-      <div class="container hero-container m-auto row align-items-center vh-50">
-        <div class="col-sm hero-column text-light animate-fadeUpIn">
-          <h1>Find Your Dream Career</h1>
-          <p class="fs-5">Discover new vacancies and salaries for jobs you'll love.</p>
+    <main>
+      <!-- Hero section -->
+      <section class="bg-darkblue py-5"> 
+        <div class="container hero-container m-auto row align-items-center vh-50">
+          <div class="col-sm hero-column text-light animate-fadeUpIn">
+            <h1>Find Your Dream Career</h1>
+            <p class="fs-5">Discover new vacancies and salaries for jobs you'll love.</p>
+          </div>
+          <div class="col-sm fs-4 text-light animate-fadeLeftIn">
+            <p>&#9642; Find out your regular earnings based off of your hourly salary</p>
+            <p>&#9642; Find new job opportunities near you</p>
+            <p>&#9642; Discover your true potential</p>
+          </div>
         </div>
-        <div class="col-sm fs-4 text-light animate-fadeLeftIn">
-          <p>&#9642; Find out your regular earnings based off of your hourly salary</p>
-          <p>&#9642; Find new job opportunities near you</p>
-          <p>&#9642; Discover your true potential</p>
-        </div>
-      </div>
-    </section>
-    <!-- Hero section END -->
+      </section>
+      <!-- Hero section END -->
 
-    <!-- Grid info section -->
-    <section class="container py-lg-0 py-4">
-      <div class="d-none d-lg-block text-darkblue"> 
-        <!-- desktop version for visual appeal - will only show on larger screens -->
-        <div class="row">
-          <div id="d-vacancy-text" class="col-sm text-center m-auto">
-            <h2>Search for new jobs now</h2>
-            <p>Discover new and emerging job opportunities using our Vacancy Search.</p>
-            <p>Get information on job types, titles, companies and more.</p>
-            <a class="btn btn-light" href="pages/vacancies.html">Search for Vacancies</a>
-          </div>
-          <div class="col-sm gray">
-            <img class="d-flex m-auto" src="style/images/vacancy-sm.jpg" alt="Vacancy Search">
-          </div>
-        </div>
-        <div class="row bg-darkblue">
-          <div class="col-sm gray">
-            <img class="d-flex m-auto" src="style/images/takehome-sm.jpg" alt="Take-Home Pay Calculator">
-          </div>
-          <div class="col-sm text-center m-auto text-light" id="d-takehome-text">
-            <h2>Calculate your earnings</h2>
-            <p>Find your daily, weekly, monthly and yearly earnings using our take-home pay calculator.</p>
-            <a class="btn btn-light" href="pages/takehome.html">Calculate Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
+      <!-- Grid info section -->
 
-    <section class="container d-lg-none"> 
-        <!-- mobile version for readability - text overlay on image card -->
-        <!-- will only show on smaller screens -->
-        <div class="card border-0">
-          <img src="style/images/vacancy-sm.jpg" class="card-img-short gray rounded-0" alt="Vacancy Search">
-          <div class="card-body" id="m-vacancy-text">
-            <h2 class="card-title">Search for new jobs now</h2>
-            <p class="card-text">Discover new and emerging job opportunities using our Vacancy Search.</p>
-            <p class="card-text">Get information on job types, titles, companies and more.</p>
-            <a class="btn btn-light" href="pages/vacancies.html">Search for Vacancies</a>
+      <!-- Vacancy section -->
+      <section class="container py-lg-0 py-4">
+        <div class="d-none d-lg-block text-darkblue"> 
+          <!-- desktop version for visual appeal - will only show on larger screens -->
+          <div class="row">
+            <div id="d-vacancy-text" class="col-sm text-center m-auto">
+              <h2>Search for new jobs now</h2>
+              <p>Discover new and emerging job opportunities using our Vacancy Search.</p>
+              <p>Get information on job types, titles, companies and more.</p>
+              <a class="btn btn-light" href="pages/vacancies.html">Search for Vacancies</a>
+            </div>
+            <div class="col-sm gray">
+              <img class="d-flex m-auto" src="style/images/vacancy-sm.jpg" alt="Vacancy Search">
+            </div>
+          </div>
+          <div class="row bg-darkblue">
+            <div class="col-sm gray">
+              <img class="d-flex m-auto" src="style/images/takehome-sm.jpg" alt="Take-Home Pay Calculator">
+            </div>
+            <div class="col-sm text-center m-auto text-light" id="d-takehome-text">
+              <h2>Calculate your earnings</h2>
+              <p>Find your daily, weekly, monthly and yearly earnings using our take-home pay calculator.</p>
+              <a class="btn btn-light" href="pages/takehome.html">Calculate Now</a>
+            </div>
           </div>
         </div>
+      </section>
+      <!-- Vacancy section END -->
 
-        <div class="card border-0">
-          <img src="style/images/takehome-sm.jpg" class="card-img-short gray rounded-0" alt="Take-Home Pay Calculator">
-          <div class="card-body bg-darkblue text-light" id="m-takehome-text">
-            <h2 class="card-title">Calculate your earnings</h2>
-            <p class="card-text">Find your daily, weekly, monthly and yearly earnings using our take-home pay calculator.</p>
-            <a class="btn btn-light" href="pages/takehome.html">Calculate Now</a>
+      <!-- Takehome section -->
+      <section class="container d-lg-none"> 
+          <!-- mobile version for readability - text overlay on image card -->
+          <!-- will only show on smaller screens -->
+          <div class="card border-0">
+            <img src="style/images/vacancy-sm.jpg" class="card-img-short gray rounded-0" alt="Vacancy Search">
+            <div class="card-body" id="m-vacancy-text">
+              <h2 class="card-title">Search for new jobs now</h2>
+              <p class="card-text">Discover new and emerging job opportunities using our Vacancy Search.</p>
+              <p class="card-text">Get information on job types, titles, companies and more.</p>
+              <a class="btn btn-light" href="pages/vacancies.html">Search for Vacancies</a>
+            </div>
           </div>
-        </div>
-    </section>
-    <!-- Grid info section END -->
 
-    <!-- footer section -->
-    <div class="container">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-body-secondary">© 2024 Zoe Johnston</p>
-  
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Homepage</a></li>
-          <li class="nav-item"><a href="pages/takehome.html" class="nav-link px-2 text-body-secondary">Take-Home Pay Calculator</a></li>
-          <li class="nav-item"><a href="pages/vacancies.html" class="nav-link px-2 text-body-secondary">Vacancy Search</a></li>
-        </ul>
-      </footer>
-    </div>
+          <div class="card border-0">
+            <img src="style/images/takehome-sm.jpg" class="card-img-short gray rounded-0" alt="Take-Home Pay Calculator">
+            <div class="card-body bg-darkblue text-light" id="m-takehome-text">
+              <h2 class="card-title">Calculate your earnings</h2>
+              <p class="card-text">Find your daily, weekly, monthly and yearly earnings using our take-home pay calculator.</p>
+              <a class="btn btn-light" href="pages/takehome.html">Calculate Now</a>
+            </div>
+          </div>
+      </section>
+      <!-- Takehome section END-->
+
+      <!-- Grid info section END -->
+    </main>
+
+    <!-- footer section with links -->
+    <footer class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <p class="col-md-4 mb-0 text-body-secondary">© 2024 Zoe Johnston</p>
+
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Homepage</a></li>
+        <li class="nav-item"><a href="pages/takehome.html" class="nav-link px-2 text-body-secondary">Take-Home Pay Calculator</a></li>
+        <li class="nav-item"><a href="pages/vacancies.html" class="nav-link px-2 text-body-secondary">Vacancy Search</a></li>
+      </ul>
+    </footer>
     <!-- footer section END -->
 
     <script src="/js/animateElement.js"></script>
