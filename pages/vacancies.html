@@ -3,29 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Take-Home Pay Calculator</title>
+    <meta name="description" content="Discover new job opportunities with our Vacancy Search, which contains hundreds of jobs from all around the United Kingdom.">
+    <title>Vacancy Search</title>
 
-    <!-- Bootstrap CSS for styling -->
+    <!-- bootstrap CSS for styling -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <!-- External CSS styling -->
+    <!-- external CSS styling -->
     <link rel="stylesheet" href="../style/css/main.css">
     <link rel="stylesheet" href="../style/css/page-css/vacancies.css">
 
-    <!-- Google Fonts links -->
+    <!-- google fonts links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- Header with navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- header with navbar -->
+    <header class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#headerNavbar" aria-controls="headerNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <!-- Navbar page links -->
+        <nav id="headerNavbar" class="collapse navbar-collapse">
+          <!-- navbar page links -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="../index.html">Homepage</a>
@@ -37,11 +38,11 @@
               <a class="nav-link active" href="vacancies.html">Vacancy Search</a>
             </li>
           </ul>
-          <!-- Navbar page links END-->
-        </div>
+          <!-- navbar page links END-->
+        </nav>
       </div>
-    </nav>
-    <!-- Header END -->
+    </header>
+    <!-- header END -->
 
     <!-- form section with image bg -->
     <div class="container-img-wrapper vacancy-bg px-md-0 p-md-5">
@@ -49,19 +50,19 @@
         <div class="row gx-3">
           <div class="col-12 col-md-10 m-auto">
             <form id="vacancy-form" class="row g-3 p-4 border bg-light text-darkblue">
-              <h2 class="text-center">Vacancy Search</h2>
+              <h1 class="text-center">Vacancy Search</h1>
               <div class="col-lg-12">
                 <label for="job_keywords" class="form-label">Job Title</label>
-                <input required type="text" class="form-control" id="job_keywords" placeholder="e.g. Retail Associate">
+                <input required type="text" id="job_keywords" class="form-control" placeholder="e.g. Retail Associate">
               </div>
               <div class="col-lg-6">
                 <label for="job_location" class="form-label">Location/Postcode (optional)</label>
-                <input type="text" class="form-control" id="job_location" placeholder="1234 Main St">
+                <input type="text" id="job_location" class="form-control" placeholder="1234 Main St">
               </div>
               <div class="col-lg-4">
                 <label for="job_radius" class="form-label">Within this radius (optional)</label>
                 <div class="input-group">
-                  <input type="number" class="form-control" id="job_radius" placeholder="1234 Main St">
+                  <input type="number" id="job_radius" class="form-control" placeholder="1234 Main St">
                   <div class="input-group-text">km</div>
                 </div>
               </div>
@@ -78,8 +79,8 @@
     <!-- results section - contains user search results, filter form and top 10 vacancies -->
     <section class="container my-4">
       <div class="row text-darkblue">
-        <div class="col-lg-7 py-3" id="search_results_container" hidden>
-          <h3 id="search-result-header"></h3>
+        <div id="search_results_container" class="col-lg-7 py-3" hidden>
+          <h3 id="search-result-header">Results for:</h3>
           <div id="search-loading-container">
             <div class="d-flex justify-content-center">
               <div class="spinner-border" role="status"></div>
@@ -87,13 +88,13 @@
             <strong class="text-center d-block">Loading...</strong>
             <small class="d-block mx-5 text-center">If results do not appear after a few seconds, please retry your search.</small>
           </div>
-          <div class="accordion py-2" id="vacancy_search_results">
+          <div id="vacancy_search_results" class="accordion py-2">
           </div>
         </div>
 
         <!-- top 10 recent vacancies - will autopopulate on page load using API -->
         <div class="col">
-          <h3>Recent Vacancies</h3>
+          <h2>Recent Vacancies</h2>
           <div id="recent-loading-container">
             <div class="d-flex justify-content-center">
               <div class="spinner-border" role="status"></div>
@@ -101,7 +102,7 @@
             <strong class="text-center d-block">Loading...</strong>
             <small class="d-block mx-5 text-center">If results do not appear after a few seconds, please refresh the page.</small>
           </div>
-          <div class="accordion py-2" id="recent_results">
+          <div id="recent_results" class="accordion py-2">
           </div>
         </div>
       </div>
@@ -109,19 +110,18 @@
     <!-- top 10 recent vacancies END -->
 
     <!-- footer section -->
-    <section class="container">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-body-secondary">© 2024 Zoe Johnston</p>
-  
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item"><a href="../index.html" class="nav-link px-2 text-body-secondary">Homepage</a></li>
-          <li class="nav-item"><a href="takehome.html" class="nav-link px-2 text-body-secondary">Take-Home Pay Calculator</a></li>
-          <li class="nav-item"><a href="vacancies.html" class="nav-link px-2 text-body-secondary">Vacancy Search</a></li>
-        </ul>
-      </footer>
-    </section>
+    <footer class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <p class="col-md-4 mb-0 text-body-secondary">© 2024 Zoe Johnston</p>
+
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="../index.html" class="nav-link px-2 text-body-secondary">Homepage</a></li>
+        <li class="nav-item"><a href="takehome.html" class="nav-link px-2 text-body-secondary">Take-Home Pay Calculator</a></li>
+        <li class="nav-item"><a href="vacancies.html" class="nav-link px-2 text-body-secondary">Vacancy Search</a></li>
+      </ul>
+    </footer>
     <!-- footer section END -->
 
+    <!-- JS scripts -->
     <script src="../js/vacancy.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
